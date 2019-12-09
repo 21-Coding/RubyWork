@@ -1,5 +1,20 @@
 require ('pry')
 
+
+
+def capital(sentence)
+  new_array = sentence.split()
+  new_array.each do |word|
+  word.capitalize!()
+end
+new_array.join(" ")
+end
+
+
+
+
+
+
 def ping_pong(number)
   number_array = (1..number).to_a
   counter = 0
