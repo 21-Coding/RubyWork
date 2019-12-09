@@ -12,7 +12,11 @@ end
 
 
 
-
+describe('#leetspeak')do
+  it('should chance the sentence from regular english to leetspeak')do
+    expect(leetspeak('seeIng Is satIsfyIng')).to(eq("s331ng 1z sat1zfy1ng"))
+  end
+end
 
 
 

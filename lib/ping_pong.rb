@@ -28,3 +28,27 @@ def ping_pong(number)
     end
 end
 end
+
+
+def leetspeak(sentence)
+  letters = sentence.chars()
+  result = []
+    counter = 0
+  letters.each do |letter|
+    if letter === 'e'
+      letter = '3'
+    elsif letter === 'o'
+      letter = '0'
+    elsif letter === 'I'
+      letter = 1
+    elsif (letter === 's') & (letters[counter - 1] != " ")
+      letter = 'z'
+    end
+    result.push(letter)
+      counter += 1
+  end
+  if result[0] === 'z'
+    result[0] = 's'
+  end
+    return result.join()
+end
