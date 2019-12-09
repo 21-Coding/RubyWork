@@ -69,3 +69,11 @@ def queen_attack(array1, array2)
     false
   end
 end
+
+
+def clock(hour, min)
+  min_deg = min * 6
+  hr_deg = 30 * hour + min/60
+  result = hr_deg - min_deg
+  return result
+end

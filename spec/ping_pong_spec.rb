@@ -36,8 +36,14 @@ require('ping_pong')
 #
 # end
 
-describe('Array#queen_attack') do
-  it('is false if the coordinates are not horizontally, vertically, or diagonally in line with each other') do
-    expect(queen_attack([5,5],[4, 6])).to(eq(true))
+# describe('Array#queen_attack') do
+#   it('is false if the coordinates are not horizontally, vertically, or diagonally in line with each other') do
+#     expect(queen_attack([5,5],[4, 6])).to(eq(true))
+#   end
+# end
+
+describe('clock') do
+  it('should return the distance between the hour and minute hand on a clock') do
+    expect(clock(3,30)).to(eq(-90))
   end
 end
