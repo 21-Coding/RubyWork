@@ -5,9 +5,9 @@ require ('pry')
 def capital(sentence)
   new_array = sentence.split()
   new_array.each do |word|
-  word.capitalize!()
-end
-new_array.join(" ")
+    word.capitalize!()
+  end
+  new_array.join(" ")
 end
 
 
@@ -16,16 +16,16 @@ end
 
 
 def ping_pong(number)
-  number_array = (1..number).to_a
+  number_array = (3..number).to_a
   counter = 0
   number_array.each do |number|
     counter += 1
     if number % 3 === 0
       number_array[counter  - 1] = 'Ping'
-      else if number % 5 === 0
-        number_array[counter - 1] = 'Pong'
-      end
+    else if number % 5 === 0
+      number_array[counter - 1] = 'Pong'
     end
+  end
 end
 end
 
@@ -33,7 +33,7 @@ end
 def leetspeak(sentence)
   letters = sentence.chars()
   result = []
-    counter = 0
+  counter = 0
   letters.each do |letter|
     if letter === 'e'
       letter = '3'
@@ -45,10 +45,27 @@ def leetspeak(sentence)
       letter = 'z'
     end
     result.push(letter)
-      counter += 1
+    counter += 1
   end
   if result[0] === 'z'
     result[0] = 's'
   end
-    return result.join()
+  return result.join()
+end
+
+
+def queen_attack(array1, array2)
+  y_dif = array1[0]-array2[0]
+  x_dif = array1[1]-array2[1]
+  if array1[1] === array2[1]
+    return true
+  elsif array1[0] === array2[0]
+    return true
+  elsif array1[0] - array1[1] === array2[0] - array2[1]
+    return true
+  elsif y_dif.abs === x_dif.abs
+    return true
+  else
+    false
+  end
 end
