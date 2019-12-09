@@ -7,6 +7,9 @@ def ping_pong(number)
     counter += 1
     if number % 3 === 0
       number_array[counter  - 1] = 'Ping'
+      else if number % 5 === 0
+        number_array[counter - 1] = 'Pong'
+      end
     end
 end
 end
